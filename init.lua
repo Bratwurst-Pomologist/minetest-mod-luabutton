@@ -9,11 +9,12 @@ core.register_node("luabutton:luabutton",{
   node_box = {
 	type = "fixed",
 	fixed = {
-		{-0.3, -0.5, -0.3, 0.3, -0.4, 0.3},
-		{-0.1, -0.4, -0.1, 0.1, -0.35, 0.1},
+		{-0.3, -0.3, 0.4, 0.3, 0.3, 0.5},
+		{-0.1, -0.1, 0.4, 0.1, 0.1, 0.35},
 	}
   },
   tiles = {"luabutton.png"},
+  inventory_image = "luabutton.png",
   groups = {not_in_creative_inventory=1,unbreakable=1},
   on_rightclick = function(pos, node, clicker, itemstack, pointed_thing)
 	local name = clicker:get_player_name()
