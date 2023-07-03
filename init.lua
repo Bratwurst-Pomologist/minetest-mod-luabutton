@@ -24,6 +24,7 @@ minetest.register_node("luabutton:luabutton",{
 		minetest.show_formspec(name, "luabutton_code", "size[16,9]" ..
 			"field[0.4,0.5;15.7,1;infotext;Infotext;"..F(meta:get_string("infotext")).."]" ..
 			"textarea[0.4,1.3;15.7,8.3;code;Variables: pos\\, node\\, clicker\\, itemstack\\, pointed_thing;"..F(meta:get_string("code")).."]" ..
+			"set_focus[save]" ..
 			"button[13.8,8.4;2,1;save;Save]")
 		editing[name] = pos
 		return itemstack
