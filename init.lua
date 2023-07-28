@@ -22,6 +22,7 @@ minetest.register_node("luabutton:luabutton",{
 	local meta = minetest.get_meta(pos)
 	if ctrl.aux1 and minetest.check_player_privs(clicker,{server=true}) then
 		minetest.show_formspec(name, "luabutton_code", "size[16,9]" ..
+			"style[code;font=mono]" ..
 			"field[0.4,0.5;15.7,1;infotext;Infotext;"..F(meta:get_string("infotext")).."]" ..
 			"textarea[0.4,1.3;15.7,8.3;code;Variables: pos\\, node\\, clicker\\, itemstack\\, pointed_thing;"..F(meta:get_string("code")).."]" ..
 			"set_focus[save]" ..
@@ -93,6 +94,7 @@ minetest.register_node("luabutton:luaplate",{
 	local meta = minetest.get_meta(pos)
 	if ctrl.aux1 and minetest.check_player_privs(clicker,{server=true}) then
 		minetest.show_formspec(name, "luaplate_code", "size[16,9]" ..
+			"style[code;font=mono]" ..
 			"field[0.4,0.5;15.7,1;infotext;Infotext;"..F(meta:get_string("infotext")).."]" ..
 			"textarea[0.4,1.3;15.7,8.3;code;Variables: pos\\, player;"..F(meta:get_string("code")).."]" ..
 			"set_focus[save]" ..
