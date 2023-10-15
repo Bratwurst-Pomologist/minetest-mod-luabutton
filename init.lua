@@ -65,12 +65,15 @@ minetest.register_node("luabutton:luaplate",{
   on_timer = function(pos, elapsed)
 	local timer = minetest.get_node_timer(pos)
 	timer:start(0.3)
+	local objs = minetest.get_objects_inside_radius(pos, 0.8)
+	if not objs or #objs == 0 then
+		return
+	end
 	local meta = minetest.get_meta(pos)
 	local code = meta and meta:get_string("code")
 	if not code or code == "" then
 		return
 	end
-	local objs = minetest.get_objects_inside_radius(pos, 0.8)
 	for _,obj in ipairs(objs) do
 		if obj:is_player() then
 			local name = obj:get_player_name()
@@ -116,12 +119,15 @@ minetest.register_node("luabutton:luatrigger",{
   on_timer = function(pos, elapsed)
 	local timer = minetest.get_node_timer(pos)
 	timer:start(0.3)
+	local objs = minetest.get_objects_inside_radius(pos, 1)
+	if not objs or #objs == 0 then
+		return
+	end
 	local meta = minetest.get_meta(pos)
 	local code = meta and meta:get_string("code")
 	if not code or code == "" then
 		return
 	end
-	local objs = minetest.get_objects_inside_radius(pos, 1)
 	for _,obj in ipairs(objs) do
 		if obj:is_player() then
 			local name = obj:get_player_name()
