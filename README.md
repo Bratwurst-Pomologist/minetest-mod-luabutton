@@ -1,6 +1,6 @@
 # minetest-mod-luabutton
 Button that executes custom lua code on rightclick  
-![ContentDB](https://content.minetest.net/packages/Zemtzov7/luabutton/shields/downloads/)
+[![ContentDB](https://content.minetest.net/packages/Zemtzov7/luabutton/shields/downloads/)](https://content.minetest.net/packages/Zemtzov7/luabutton/)
 ### Nodes
 * `luabutton:luabutton` - The button that executes code on rightclick
 * `luabutton:luaplate` - Plate that executes code when player is stepping on it
