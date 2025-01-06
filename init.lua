@@ -1,13 +1,17 @@
 local editing = {}
 local F = minetest.formspec_escape
 
---minetest.override_item("luabutton:luabutton", {
-    tiles = {"baked_clay_white.png"},
-})
-
---minetest.override_item("luabutton:luabutton", {
+minetest.override_item("luabutton:luabutton", {
     tiles = {"baked_clay_white.png^[colorize:#0000FF:128"},
     inventory_image = "baked_clay_white.png^[colorize:#0000FF:128",
+})
+minetest.override_item("luabutton:luatrigger", {
+    tiles = {"baked_clay_white.png^[colorize:#ab2c3f:128"},
+    inventory_image = "baked_clay_white.png^[colorize:#ab2c3f:128",
+})
+minetest.override_item("luabutton:luaplate", {
+    tiles = {"baked_clay_white.png^[colorize:#32a852:128"},
+    inventory_image = "baked_clay_white.png^[colorize:#32a852:128",
 })
 
 
