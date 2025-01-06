@@ -2,12 +2,12 @@ local editing = {}
 local F = minetest.formspec_escape
 
 --minetest.override_item("luabutton:luabutton", {
-    tiles = {"bakedclay_white.png"},
+    tiles = {"baked_clay_white.png"},
 })
 
 --minetest.override_item("luabutton:luabutton", {
-    tiles = {"bakedclay_white.png^[colorize:#0000FF:128"},
-    inventory_image = "bakedclay_white.png^[colorize:#0000FF:128",
+    tiles = {"baked_clay_white.png^[colorize:#0000FF:128"},
+    inventory_image = "baked_clay_white.png^[colorize:#0000FF:128",
 })
 
 
@@ -23,8 +23,8 @@ minetest.register_node("luabutton:luabutton",{
 		{-0.1, -0.1, 0.4, 0.1, 0.1, 0.35},
 	}
   },
-  tiles = {"luabutton.png"},
-  inventory_image = "luabutton.png",
+  tiles = {"baked_clay_white.png"},
+  inventory_image = "baked_clay_white.png",
   groups = {not_in_creative_inventory=1,unbreakable=1},
   on_rightclick = function(pos, node, clicker, itemstack, pointed_thing)
 	local name = clicker:get_player_name()
@@ -69,8 +69,8 @@ minetest.register_node("luabutton:luaplate",{
 		{-0.4, -0.45, -0.4, 0.4, -0.5, 0.4},
 	}
   },
-  tiles = {"luaplate.png"},
-  inventory_image = "luaplate.png",
+  tiles = {"baked_clay_white.png"},
+  inventory_image = "baked_clay_white.png",
   groups = {not_in_creative_inventory=1,unbreakable=1},
   on_timer = function(pos, elapsed)
 	local timer = minetest.get_node_timer(pos)
@@ -124,7 +124,7 @@ minetest.register_node("luabutton:luatrigger",{
   drawtype = "airlike",
   pointable = false,
   walkable = false,
-  inventory_image = "luatrigger.png",
+  inventory_image = "baked_clay_white.png",
   groups = {not_in_creative_inventory=1,unbreakable=1},
   on_timer = function(pos, elapsed)
 	local timer = minetest.get_node_timer(pos)
